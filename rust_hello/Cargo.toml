@@ -1,0 +1,8 @@
+[package]
+name = "rust_hello"
+version = "0.1.0"
+authors = ["geekpanshi <shix_112@163.com>"]
+edition = "2018"
+
+[dependencies]
+iced = "0.1"
