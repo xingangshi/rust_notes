@@ -1,8 +1,28 @@
 [package]
-name = "rust_hello"
+name = "todos"
 version = "0.1.0"
 authors = ["geekpanshi <shix_112@163.com>"]
 edition = "2018"
+publish = false
 
 [dependencies]
+async-std = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+directories = "2.0"
 iced = "0.1"
+iced_web = "0.2"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+async-std = "1.0"
+directories = "2.0"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+web-sys = { version = "0.3", features = ["Window", "Storage"] }
+wasm-timer = "0.2"
+
+[package.metadata.deb]
+assets = [
+    ["target/release/todos", "usr/bin/iced-todos", "755"],
+    ["iced-todos.desktop", "usr/share/applications/", "644"],
+]
