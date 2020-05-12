@@ -3,3 +3,4 @@
 *.log
 
 rust_hello/target
+hello_rocket/target
