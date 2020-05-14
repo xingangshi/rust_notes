@@ -7,3 +7,4 @@ hello_rocket/target
 tools_grrs/target
 base/target
 librust_math.dylib
+main
