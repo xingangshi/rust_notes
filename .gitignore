@@ -1,5 +1,5 @@
 *.lock
-*.swp
+*.sw*
 *.log
 
 rust_hello/target

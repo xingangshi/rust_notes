@@ -8,7 +8,6 @@ use std::io::Cursor;
 use rocket::fairing::{Fairing, Info, Kind};
 use rocket::{Request, Response};
 use rocket::http::{Header, ContentType, Method, Status};
-use rocket::response::content::Json;
 use rocket::response::status::Custom;
 use rocket::Data;
 use multipart::server::Multipart;
@@ -62,10 +61,7 @@ fn hello_1(cont_type: &ContentType, data: Data) -> Result<Custom<String>, Custom
 
     age = age + 1;
     print!("Hello, {}, your age {}", name, age);
-    let mut result = String::new();
-
-    result = format!("{{\"name\":\"{}\",\"age\":\"{}\"}}", name, age);
-    print!("aaa{}", result);
+    let result = format!("{{\"name\":\"{}\",\"age\":\"{}\"}}", name, age);
     return Ok(
         Custom(Status::Ok, result)
     );
