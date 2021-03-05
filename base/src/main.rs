@@ -35,17 +35,27 @@ fn main() {
     // Define a 32 bit mutable integer
     let mut age: i32 = 40;
 
+    println!("num {}, age {}", num, age);
+
     // There are many number types i8, i16, i32,
     // i64, u8, u16, u32, u64, isize, usize, f32, f64
 
     println!("Max i8 {}", i8::MAX);
     println!("Min i8 {}", i8::MIN);
+    println!("Max u8 {}", u8::MAX);
+    println!("Min u8 {}", u8::MIN);
     println!("Max i16 {}", i16::MAX);
     println!("Min i16 {}", i16::MIN);
     println!("Max i32 {}", i32::MAX);
     println!("Min i32 {}", i32::MIN);
     println!("Max i64 {}", i64::MAX);
     println!("Min i64 {}", i64::MIN);
+    println!("Max u16 {}", u16::MAX);
+    println!("Min u16 {}", u16::MIN);
+    println!("Max u32 {}", u32::MAX);
+    println!("Min u32 {}", u32::MIN);
+    println!("Max u64 {}", u64::MAX);
+    println!("Min u64 {}", u64::MIN);
     println!("Max isize {}", isize::MAX);
     println!("Min isize {}", isize::MIN);
     println!("Max usize {}", usize::MAX);
@@ -66,6 +76,7 @@ fn main() {
 
     // You can define multiple variables
     let (f_name, l_name) = ("Derek", "Banas");
+    println!("{}, {}", f_name, l_name);
 
     // ---------- OUTPUT ----------
 
@@ -93,6 +104,8 @@ fn main() {
 
     let mut neg_4 = -4i32;
 
+    println!("neg_4 {}", neg_4);
+
     println!("abs(-4) = {}", neg_4.abs());
     println!("4 ^ 6 = {}", 4i32.pow(6));
     println!("sqrt 9 = {}", 9f64.sqrt());
@@ -117,9 +130,9 @@ fn main() {
 
     let age_old = 6;
 
-    if (age_old == 5) {
+    if age_old == 5 {
         println!("Go to kindergarten");
-    } else if (age_old > 5) && (age_old <= 18){
+    }else if (age_old > 5) && (age_old <= 18){
         println!("Go to grade {}", (age_old - 5));
     } else if (age_old <= 25) && (age_old > 18) {
         println!("Go to college");
@@ -132,7 +145,7 @@ fn main() {
     println!("true != false : {}", (true != false));
 
     // Ternary operator
-    let can_vote = if (age_old >= 18) {true} else {false};
+    let can_vote = if age_old >= 18 {true} else {false};
     println!("Can Vote : {}", can_vote);
 
     // ---------- LOOPING ----------
@@ -140,14 +153,14 @@ fn main() {
 
     loop {
         // If even print number
-        if((x % 2) == 0) {
+        if (x % 2) == 0 {
             println!("{}", x);
             x += 1;
 
             // Jump back to the beginning of the loop
             continue;
         }
-        if(x > 10){
+        if x > 10{
 
             // Jump out of the loop
             break;
