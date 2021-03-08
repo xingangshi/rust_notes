@@ -1,6 +1,7 @@
 *.lock
 *.sw*
 *.log
+*target
 
 rust_hello/target
 hello_rocket/target
