@@ -8,5 +8,4 @@ fn main() {
 
     let mut write = BufWriter::new(stdout.lock());
     say(msg.as_bytes(), width, &mut write).unwrap();
-
 }
