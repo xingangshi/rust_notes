@@ -1,7 +1,6 @@
 use std::env::args;
 use std::path::PathBuf;
 
-
 struct Cli {
     pattern: String,
     path: std::path::PathBuf,

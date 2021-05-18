@@ -6,20 +6,20 @@ edition = "2018"
 publish = false
 
 [dependencies]
-async-std = "1.0"
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-directories = "2.0"
-iced = "0.1"
-iced_web = "0.2"
+async-std = "1.9.0"
+serde = { version = "1.0.124", features = ["derive"] }
+serde_json = "1.0.64"
+directories = "3.0.1"
+iced = "0.2.0"
+iced_web = "0.3.0"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-async-std = "1.0"
-directories = "2.0"
+async-std = "1.9.0"
+directories = "3.0.1"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-web-sys = { version = "0.3", features = ["Window", "Storage"] }
-wasm-timer = "0.2"
+web-sys = { version = "0.3.48", features = ["Window", "Storage"] }
+wasm-timer = "0.2.5"
 
 [package.metadata.deb]
 assets = [

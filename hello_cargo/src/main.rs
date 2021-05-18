@@ -1,11 +1,14 @@
-use std::io::{stdout, BufWriter};
-use ferris_says::say;
+
+macro_rules! o_O{
+    (
+        $($x:expr; [$($y:expr ), *]); *
+    ) => {
+        &[$($( $x + $y ), *), *]
+    }
+}
 
 fn main() {
-    let stdout = stdout();
-    let msg = String::from("Hello from Rustceans");
-    let width = msg.chars().count();
+    let a: &[i32] = o_O!(10; [1, 2, 3]; 20; [4, 5, 6, 7]);
 
-    let mut write = BufWriter::new(stdout.lock());
-    say(msg.as_bytes(), width, &mut write).unwrap();
+    assert_eq!(a, [11, 12, 13, 24, 25, 26, 27]);
 }
