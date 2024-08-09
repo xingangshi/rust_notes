@@ -1,7 +1,33 @@
 fn main() {
+    let x = 5;
+    // x = 6;
+    println!("{}", x);
+    let mut y = 5;
+    println!("{}", y);
+    y = 6;
+    println!("{}", y);
+
+    let _guess: i32 = 42;
+    let _guess = "42".parse::<i32>().expect("Not a number");
     println!("Hello, world!");
     let result = print_from_fn(5, 100);
     println!("result {}", result);
+
+    let s1 = String::from("hello");
+    let s2 = s1;
+    println!("{}", s2);
+
+    let str1 = "中国人";
+    let str2 = String::from(str1);
+
+    for c in str1.chars() {
+        println!("{}", c);
+    }
+
+    for b in str2.bytes() {
+        println!("{}", b);
+
+    }
 
     println!("condition test {}", if_else_test(10));
     loop_test(10);

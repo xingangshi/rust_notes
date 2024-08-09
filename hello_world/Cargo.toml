@@ -1,13 +1,12 @@
 [package]
 name = "hello_world"
 version = "0.1.0"
-authors = ["vincent <shix_112@163.com>"]
-edition = "2018"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-
-[lib]
-name = "hello_world"
-path = "hello_world.rs"
+# rand = "0.3"
+# hammer = { version = "0.5.0" }
+# color = { git = "https://github/bjz/color-rs" }
+# geometry = { path = "crates/geometry" }
